@@ -1,0 +1,178 @@
+
+
+:root {
+    --defaultNav: #EE5511;
+    --darkBG: #222222;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--darkBG);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--defaultNav);
+  }
+
+/* Button Changes */
+.btn:hover {
+    color: var(--defaultNav) !important;
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+  }
+
+.btn.btn-outline-light:hover {
+    color: white !important;
+    background-color: var(--defaultNav) !important;
+}
+
+#brandIcon {
+    transition: transform .7s ease-in-out;
+  }
+#brandIcon:hover {
+    transform: rotate(360deg);
+  }
+
+a {
+    color: inherit;
+}
+
+/* Size Changes */
+#landingPageSection {
+    height: 110vh;
+}
+
+#WorkExperience {
+    min-height: fit-content;
+}
+
+.subSection {
+    min-height: fit-content !important;
+    height: 120vh;
+}
+
+.subSubSection {
+    height: 80vh;
+}
+
+.landingPage {
+    height: 900px;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        transform: translate3d(0,20px,0);
+        opacity: 0;
+    }
+    100% {
+        transform: translate3d(0,0,0);
+        opacity: 1;
+    }
+}
+
+.extraText {
+    color:gray;
+}
+
+.scrolled-down {
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+  .scrolled-up {
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#landingPageSubText {
+    max-width: 600px;
+}
+
+.popOut {
+    filter: brightness(110%);
+}
+
+.extraPopOut {
+    filter: brightness(115%);
+}
+
+.siteImages {
+    filter: grayscale(100%);
+    transform: scale(.98);
+    transition: 0.5s;
+}
+
+.siteImages:hover {
+    transform: scale(1);
+    filter: grayscale(0%);
+}
+
+#aboutMe {
+    min-height:min-content;
+}
+
+.actualBox {
+    min-height: fit-content;
+}
+
+.growingElement {
+    transform: scale(.98);
+    transition: 0.5s;
+}
+
+.growingElement:hover {
+    transform: scale(1);
+    color: var(--defaultNav);
+}
+
+.cardPic {
+    filter: brightness(40%);
+}
+
+.hover-underline {
+    display: inline-block;
+    position: relative;
+    color: var(--defaultNav);
+  }
+  
+  .hover-underline:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--defaultNav);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
