@@ -176,3 +176,12 @@ a {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  @media screen and (max-width: 768px) {
+    #hidable-one{
+        display: none;
+    }
+    #hidable-two{
+        display: none;
+    }
+  }
